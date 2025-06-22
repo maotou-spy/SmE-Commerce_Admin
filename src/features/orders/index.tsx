@@ -6,8 +6,14 @@ import {OrdersDialogs} from './components/orders-dialogs.tsx'
 import {sampleOrders} from "@/features/orders/types/orders.ts";
 import {DataTable} from "@/components/layout/column/data-table.tsx";
 import {columns} from "@/features/orders/components/columns.tsx";
+import {useEffect} from "react";
 
 export default function Orders() {
+
+    useEffect(() => {
+        document.title = 'TMDS | Đơn hàng'
+    }, [])
+
     return (
         <OrdersProvider>
             <AppHeader/>

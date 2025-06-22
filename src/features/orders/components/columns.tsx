@@ -3,7 +3,8 @@ import {Checkbox} from '@/components/ui/checkbox'
 import {Order} from '@/features/orders/types/schema'
 import {DataTableColumnHeader} from '@/components/layout/column/data-table-column-header.tsx'
 import {Badge} from '@/components/ui/badge'
-import {orderColumnTitles, orderStatuses} from "@/features/orders/types/data.tsx";
+import {getStatusIcon, getStatusVariant, orderColumnTitles, orderStatuses} from "@/features/orders/types/data.tsx";
+import {DataTableRowActions} from "@/features/orders/components/data-table-row-actions.tsx";
 
 export const columns: ColumnDef<Order>[] = [
     {
@@ -100,8 +101,8 @@ export const columns: ColumnDef<Order>[] = [
                 (s) => s.value === row.getValue('status')
             )?.label || row.getValue('status')
             return (
-                <Badge variant='outline' className='capitalize'>
-                    {status}
+                <Badge variant={getStatusVariant(row.getValue('status')) as any} className='capitalize'>
+                    {getStatusIcon(row.getValue('status'))} {status}
                 </Badge>
             )
         },
@@ -165,8 +166,8 @@ export const columns: ColumnDef<Order>[] = [
 
     },
 
-    // {
-    //     id: 'actions',
-    //     cell: ({row}) => <DataTableRowActions row={row}/>,
-    // },
+    {
+        id: 'actions',
+        cell: ({row}) => <DataTableRowActions row={row}/>,
+    },
 ]
