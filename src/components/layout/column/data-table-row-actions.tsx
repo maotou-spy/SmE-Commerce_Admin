@@ -8,7 +8,7 @@ import {
     DropdownMenuShortcut,
     DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu.tsx'
-import {useOrders} from '../../features/orders/context/orders-context.tsx'
+import {useOrders} from '../../../features/orders/context/orders-context.tsx'
 import {orderSchema} from '@/features/orders/types/schema.ts'
 import {Edit, Trash2} from "lucide-react";
 

@@ -1,7 +1,7 @@
 import {ColumnDef} from '@tanstack/react-table'
 import {Checkbox} from '@/components/ui/checkbox'
 import {Order} from '@/features/orders/types/schema'
-import {DataTableColumnHeader} from '@/components/column/data-table-column-header.tsx'
+import {DataTableColumnHeader} from '@/components/layout/column/data-table-column-header.tsx'
 import {Badge} from '@/components/ui/badge'
 import {orderColumnTitles, orderStatuses} from "@/features/orders/types/data.tsx";
 

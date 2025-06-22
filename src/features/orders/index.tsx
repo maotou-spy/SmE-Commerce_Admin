@@ -4,7 +4,7 @@ import {OrdersPrimaryButtons} from './components/orders-primary-buttons.tsx'
 import OrdersProvider from './context/orders-context.tsx'
 import {OrdersDialogs} from './components/orders-dialogs.tsx'
 import {sampleOrders} from "@/features/orders/types/orders.ts";
-import {DataTable} from "@/components/column/data-table.tsx";
+import {DataTable} from "@/components/layout/column/data-table.tsx";
 import {columns} from "@/features/orders/components/columns.tsx";
 
 export default function Orders() {
